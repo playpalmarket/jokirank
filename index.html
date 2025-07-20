@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joki Rank MLBB | PlayPal Market</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1a1a1a;
+      --muted: #666;
+      --border: #dcdcdc;
+      --accent: #0D6EFD; /* Warna biru */
+      --font: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f7f7f8;
+      color: var(--fg);
+      font-family: var(--font);
+      font-size: 15px;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 15px 10px;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+
+    .section h2 {
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+      font-weight: 500;
+      color: var(--muted);
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 4px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px 15px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .item:hover {
+      box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .amount {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--fg);
+    }
+
+    .price {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    
+    /* Style khusus untuk Joki Perbintang */
+    .joki-item {
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 12px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.2s ease;
+    }
+    .joki-item:hover {
+        box-shadow: 0 4px 12px rgba(13, 110, 253, 0.1);
+        border-color: var(--accent);
+    }
+    .joki-info .rank {
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    .joki-info .price-per-star {
+        font-size: 0.85rem;
+        color: var(--muted);
+    }
+    .order-button {
+        background-color: var(--accent);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        transition: background-color 0.2s;
+    }
+    .order-button:hover {
+        background-color: #0B5ED7;
+    }
+
+    footer {
+      padding: 20px 15px 40px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Joki Rank MLBB</h1>
+  </header>
+  
+  <section class="section">
+    <h2>Joki Perbintang</h2>
+    <div class="grid">
+        <div class="joki-item" data-rank="Epic">
+            <div class="joki-info">
+                <div class="rank">Epic</div>
+                <div class="price-per-star">Rp 3.000 / bintang</div>
+            </div>
+            <button class="order-button">+</button>
+        </div>
+        <div class="joki-item" data-rank="Legends">
+            <div class="joki-info">
+                <div class="rank">Legends</div>
+                <div class="price-per-star">Rp 4.000 / bintang</div>
+            </div>
+            <button class="order-button">+</button>
+        </div>
+        <div class="joki-item" data-rank="Mythic">
+            <div class="joki-info">
+                <div class="rank">Mythic</div>
+                <div class="price-per-star">Rp 5.000 / bintang</div>
+            </div>
+            <button class="order-button">+</button>
+        </div>
+        <div class="joki-item" data-rank="Mythic Honor">
+            <div class="joki-info">
+                <div class="rank">Mythic Honor</div>
+                <div class="price-per-star">Rp 6.000 / bintang</div>
+            </div>
+            <button class="order-button">+</button>
+        </div>
+        <div class="joki-item" data-rank="Mythic Glory">
+            <div class="joki-info">
+                <div class="rank">Mythic Glory</div>
+                <div class="price-per-star">Rp 9.000 / bintang</div>
+            </div>
+            <button class="order-button">+</button>
+        </div>
+        <div class="joki-item" data-rank="Mythic Immortal">
+            <div class="joki-info">
+                <div class="rank">Mythic Immortal</div>
+                <div class="price-per-star">Rp 15.000 / bintang</div>
+            </div>
+            <button class="order-button">+</button>
+        </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Paket Per 10 Bintang</h2>
+    <div class="grid">
+        <div class="item"><div class="amount">Epic 10 Bintang</div><div class="price">Rp 25.000</div></div>
+        <div class="item"><div class="amount">Legends 10 Bintang</div><div class="price">Rp 35.000</div></div>
+        <div class="item"><div class="amount">Mythic 10 Bintang</div><div class="price">Rp 45.000</div></div>
+        <div class="item"><div class="amount">Mythic Honor 10 Bintang</div><div class="price">Rp 55.000</div></div>
+        <div class="item"><div class="amount">Mythic Glory 10 Bintang</div><div class="price">Rp 85.000</div></div>
+        <div class="item"><div class="amount">Mythic Immortal 10 Bintang</div><div class="price">Rp 145.000</div></div>
+    </div>
+  </section>
+  
+  <section class="section">
+    <h2>Paket Rank to Rank</h2>
+    <div class="grid">
+        <div class="item"><div class="amount">Mythic ke Honor</div><div class="price">Rp 120.000</div></div>
+        <div class="item"><div class="amount">Honor ke Glory</div><div class="price">Rp 145.000</div></div>
+        <div class="item"><div class="amount">Glory ke Immortal</div><div class="price">Rp 425.000</div></div>
+    </div>
+  </section>
+
+  <footer>
+    PlayPal Market &copy; 2025
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const adminNumber = '6285877001999';
+
+      // Fungsi umum untuk membuka WhatsApp
+      function openWhatsApp(message) {
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappURL = `https://wa.me/${adminNumber}?text=${encodedMessage}`;
+        window.open(whatsappURL, '_blank');
+      }
+
+      // Handler untuk Joki Perbintang
+      const jokiItems = document.querySelectorAll('.joki-item');
+      jokiItems.forEach(item => {
+        item.addEventListener('click', function () {
+          const rank = this.dataset.rank;
+          const messageTemplate = `Login : (Moonton/FB/VK)\nEmail : \nPassword : \nTier (Bintang) : \nJumlah Order : Joki ${rank} (Isi jumlah bintang)`;
+          openWhatsApp(messageTemplate);
+        });
+      });
+
+      // Handler untuk Paket 10 Bintang & Rank to Rank
+      const packageItems = document.querySelectorAll('.item');
+      packageItems.forEach(item => {
+        item.addEventListener('click', function () {
+          const packageName = this.querySelector('.amount').textContent.trim();
+          const messageTemplate = `Login : (Moonton/FB/VK)\nEmail : \nPassword : \nTier (Bintang) : \nJumlah Order : Paket ${packageName}`;
+          openWhatsApp(messageTemplate);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
